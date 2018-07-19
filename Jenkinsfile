@@ -12,6 +12,6 @@ stage ('Build') {
 sh 'echo "build now"'
 }
 stage ('Deploy') {
-sh 'ssh jenkins@192.168.190.129  cd /root/Demo && git pull orgin master'
+sh 'ssh jenkins@192.168.190.129  cd Demo && git pull orgin master'
 }
 }
