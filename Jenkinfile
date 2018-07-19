@@ -1,0 +1,23 @@
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { label 'Test-Machine2' }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'cd /root/Demo'
+                sh 'git pull origin master'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
