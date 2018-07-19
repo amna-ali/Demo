@@ -12,6 +12,6 @@ stage ('Build') {
 sh 'echo "build now"'
 }
 stage ('Deploy') {
-sh 'ssh jenkins@192.168.190.129 mkdir /home/jenkins/amna'
+sh 'ssh jenkins@192.168.190.129 mkdir cd /root/Demo && git pull orgin master'
 }
 }
