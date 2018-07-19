@@ -1,23 +1,23 @@
 pipeline {
-    agent any 
+    agent any
+
     stages {
         stage('Build') {
             steps {
-                sh "ant -f build.xml -v"
+                sh "ssh jenkins@192.168.190.129"
+                sh "cd /root/Demo"
+                sh "git pull origin master"
             }
         }
-        stage('Test') { 
-              steps {
-        echo 'Awesome Test!'
-      }
- 
-    }
-    stage('Deploy') { 
-      steps {
-        echo 'Awesome Prod!'
-      }
- 
-    }
-
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
