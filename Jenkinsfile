@@ -1,6 +1,6 @@
 node {
-stage (‘Prepare environment’) {
-sh ‘echo “prepration”’
+stage ('Prepare environment') {
+sh 'echo "prepration"'
 }
 stage (‘Code analyse’) {
 sh ‘echo “Run some lints”’
