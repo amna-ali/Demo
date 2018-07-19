@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ssh jenkins@192.168.190.129'
+                sh 'ssh -t jenkins@192.168.190.129'
                 sh "touch amna"
              
             }
