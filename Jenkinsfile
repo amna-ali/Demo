@@ -14,15 +14,9 @@ pipeline {
         }
         stage('Deploy') {
         input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
+                message "Ready to go?"
             }
             steps {
-                echo "Hello, ${PERSON}, Will deploy now on PROD.....!"
                 sh 'cd /home/jenkins/Demo && git pull origin master'
             }
         }
