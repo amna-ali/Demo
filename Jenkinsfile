@@ -1,6 +1,8 @@
 pipeline {
     agent { label 'test-machine2' }
-
+    options {
+    skipDefaultCheckout(true)
+}
     stages {
         stage('Build') {
             steps {
