@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cd Demo && git pull origin master'
+                sh 'cd /home/jenkins/Demo && git pull origin master'
             }
         }
     }
