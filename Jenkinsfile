@@ -22,6 +22,7 @@ pipeline {
                 }
             }
             steps {
+                echo "Hello, ${PERSON}, Will deploy now on PROD.....!"
                 sh 'cd /home/jenkins/Demo && git pull origin master'
             }
         }
